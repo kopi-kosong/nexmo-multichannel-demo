@@ -1,58 +1,70 @@
-# SMS Proxy using Node and the Nexmo SMS API
+# nexmo API practice 
+My playground of coding and demo. 
 
-This app uses the Nexmo SMS API to demonstrate how to build an SMS proxy for private communication between users. Each user sees only the other party's virtual number, not their real one.
+On the main page, clicking on the chat icon, a private message will be created between the configured customer_a_number and customer_b_number.
+
+The virtual number serves as a proxy to mask the sender numbers, so that neither of the sender will see the other party's mobile number.
+
+
+The demo is based on nexmo verify API. 
+
+
+# Deploy to Heroku
+
+## Step 1: 
+
+Click the following button to deploy the source to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kopi-kosong/nexmo-sms-api.git)
+
+## Step 2: 
+
+Click on your Application, and Go to "Settings - > Config Vars" to add the following environment variables:
+
+NEXMO_API_KEY=<YOUR NEXMO API KEY>,
+
+NEXMO_API_SECRET=<YOUR NEXMO API SECRET>,
+
+NEXMO_CUST_A_NUM =<From Mobile Number>,
+
+NEXMO_CUST_B_NUM =<To Mobile Number>,
+
+NEXMO_BRAND_NAME=<UP TO 11 ALPHANUMERIC CHARACTERS>
+
+VIRTUAL_NUMBER=<YOUR Nexmo Vitural Number >,
+
+# Run it locally
 
 ## Prerequisites
+Download the source from git.
 
-You will need:
+Run the following command to install dependencies.
 
-* A [free Nexmo account](https://dashboard.nexmo.com/sign-up)
-* Somewhere to host this web app: Heroku or your local machine with ngrok both work well
-
-## Installation
-
-```sh
-git clone https://github.com/nexmo/node-sms-proxy.git
-cd node-sms-proxy
+```bash
 npm install
 ```
 
-## Setup
+## Configuring the application
 
-Rename the config file:
+Configure the following in envrionment variables in Windows:
 
-```sh
-mv example.env .env
-```
+NEXMO_API_KEY=YOUR NEXMO API KEY,
 
-Fill in the values in `.env` as appropriate; this will be your API key and secret, and the Nexmo number you want to use.
+NEXMO_API_SECRET=YOUR NEXMO API SECRET,
 
-If you do not have a virtual number, you can purchase one via the [dashboard](https://dashboard.nexmo.com).
+NEXMO_CUST_A_NUM =From Mobile Number,
 
-Configure the number's SMS webhook URL to point to your application (if you are using [ngrok](https://ngrok.com) then start your tunnel now), e.g. `https://abcd1234.ngrok.io/webhooks/inbound-sms`
+NEXMO_CUST_B_NUM =To Mobile Number
 
-### Running the App
+NEXMO_BRAND_NAME=UP TO 11 ALPHANUMERIC CHARACTERS
 
-```sh
-npm start
-```
+VIRTUAL_NUMBER=<YOUR Nexmo Vitural Number >,
 
-The application should be available on `http://localhost:3000`.
+or, you could go to server.js and hardcoded the values.
 
-> To change the port, try `PORT=3001 npm start` as an alternative command
-
-### Using the App
-
-Register a conversation with the application so that mappings can be created between real user numbers and Nexmo virtual numbers. This is done by making a `POST` such as the following to `http://localhost:3000/chat`
- and replacing `USER_A_NUMBER` and `USER_B_NUMBER` with the real numbers of the parties involved:
+For how to modify enrionment variables on Windows, please refer to the following :
+https://docs.oracle.com/en/database/oracle/r-enterprise/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html
 
 ```
-POST /chat HTTP/1.1
-Host: localhost:3000
-Cache-Control: no-cache
-Content-Type: application/x-www-form-urlencoded
-
-userANumber=USER_A_NUMBER&userBNumber=USER_B_NUMBER
-```
-
-When you do this each of the users will receive a text. Replying to that text will allow the users to communicate anonymously with each other.
+## Running the application
+You should then be able to run the app with `npm start`.
