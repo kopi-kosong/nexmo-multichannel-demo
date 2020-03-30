@@ -43,5 +43,19 @@ https://docs.oracle.com/en/database/oracle/r-enterprise/1.5.1/oread/creating-and
 ```
 ## Use ngrok 
 ngrok provides introspectable tunnels to localhost, so that your webhook can be access through Internet.
-
 You need this service for inbound SMS. 
+
+## Configure webhook URL
+* Configure the webhook URL at your virtual number configuration page.
+* Configure the webhook URL at your nexmo API dashboard. 
+ e.g. `https://abcd1234.ngrok.io/webhooks/inbound-sms`
+ 
+ 
+## Test the Application
+
+1. Open https://abcd1234.ngrok.io/ from your Chrome or Firefox browser.
+
+2. Click on the "Chat with Driver" button. (a green icon)
+
+3. You will receive a SMS from your virtual number, reply to it, and your the other test mobile number will receive the message, without seeing your actual mobile number.
+
