@@ -21,17 +21,12 @@ Click the following button to deploy the source to Heroku
 
 Click on your Application, and Go to "Settings - > Config Vars" to add the following environment variables:
 
-NEXMO_API_KEY=<YOUR NEXMO API KEY>,
-
-NEXMO_API_SECRET=<YOUR NEXMO API SECRET>,
-
-NEXMO_CUST_A_NUM =<From Mobile Number>,
-
-NEXMO_CUST_B_NUM =<To Mobile Number>,
-
+NEXMO_API_KEY=<YOUR NEXMO API KEY>
+NEXMO_API_SECRET=<YOUR NEXMO API SECRET>
+NEXMO_CUST_A_NUM =<From Mobile Number>
+NEXMO_CUST_B_NUM =<To Mobile Number>
 NEXMO_BRAND_NAME=<UP TO 11 ALPHANUMERIC CHARACTERS>
-
-VIRTUAL_NUMBER=<YOUR Nexmo Vitural Number >,
+VIRTUAL_NUMBER=<YOUR Nexmo Vitural Number >
 
 # Run it locally
 
