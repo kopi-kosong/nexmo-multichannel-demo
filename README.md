@@ -1,13 +1,6 @@
 # nexmo API practice 
-My playground of coding and demo. 
-
-On the main page, clicking on the chat icon, a private message will be created between the configured customer_a_number and customer_b_number.
-
-The virtual number serves as a proxy to mask the sender numbers, so that neither of the sender will see the other party's mobile number.
-
-
+My playground of coding and demo. On the main page, clicking on the chat icon, a private message will be created between the configured customer_a_number and customer_b_number.The virtual number serves as a proxy to mask the sender numbers, so that neither of the sender will see the other party's mobile number.
 The demo is based on nexmo verify API. 
-
 
 # Deploy to Heroku
 
