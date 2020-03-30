@@ -53,7 +53,7 @@ You need this service for inbound SMS.
  
 ## Test the Application
 
-1. Open https://abcd1234.ngrok.io/ from your Chrome or Firefox browser.
+1. Open https://<Your ngrok domain>/ from your Chrome or Firefox browser.
 
 2. Click on the "Chat with Driver" button. (a green icon)
 
