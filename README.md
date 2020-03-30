@@ -14,7 +14,7 @@ Click the following button to deploy the source to Heroku
 
 Click on your Application, and Go to "Settings - > Config Vars" to add the following environment variables:
 
-NEXMO_API_KEY=<YOUR NEXMO API KEY>
+NEXMO_API_KEY=<YOUR NEXMO API KEY> 
   
 NEXMO_API_SECRET=<YOUR NEXMO API SECRET>
   
