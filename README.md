@@ -39,7 +39,7 @@ https://docs.oracle.com/en/database/oracle/r-enterprise/1.5.1/oread/creating-and
 
 ## Running the application
 ```
- `npm start`.
+ npm start
 ```
 ## Use ngrok 
 ngrok provides introspectable tunnels to localhost, so that your webhook can be access through Internet.
