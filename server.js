@@ -82,31 +82,6 @@ app.post('/sms', (req, res) => {
 	
 console.log('SMS has been sent to the driver successfully!');
 	
-const NEXMO_API_KEY = '267a8d9f'
-const NEXMO_API_SECRET = 'D9Qxqddp2fdBprAt'
-const TO_NUMBER = '6590110222'
-const NEXMO_BRAND_NAME = 'Nexmo'
-const Nexmo = require('nexmo')
-const nexmo = new Nexmo({
-  apiKey: NEXMO_API_KEY,
-  apiSecret: NEXMO_API_SECRET
-})
-
-const from = NEXMO_BRAND_NAME
-const to = TO_NUMBER
-const text = 'You have a taxi booking for pickup at Dover Road.' 
- nexmo.message.sendSms(from, to, text, (err, responseData) => {
-    if (err) {
-        console.log(err);
-    } else {
-        if(responseData.messages[0]['status'] === "0") {
-            console.log("Message sent successfully.");
-        } else {
-            console.log(`Message failed with error: ${responseData.messages[0]['error-text']}`);
-        }
-    }
-})
-
 
 	res.redirect('/');
 });
@@ -116,34 +91,8 @@ const text = 'You have a taxi booking for pickup at Dover Road.'
 
 // Start a phone call
 app.post('/call', (req, res) => {
+console.log('Calling you!');
 
-const Nexmo = require('nexmo')
-const nexmo = new Nexmo({
-  apiKey: '267a8d9f',
-  apiSecret: 'D9Qxqddp2fdBprAt',
-  applicationId: '97b61459-1906-4d55-9062-a1e36c0aa659',
-  privateKey: 'C:/GEORGE_WORKSPACE/02.DEV/nexmo_private_keys/voice-test-application/private.key',
-});
-
-const ncco = [
-  {
-    action: 'talk',
-    voiceName: 'Joey',
-    //text:'This is a text-to-speech test message.',
-    text:'Good afternoon, Your SMS OTP is one two three four five six.',
-  },
-];
-
-nexmo.calls.create(
-  {
-    to: [{ type: 'phone', number: TO_NUM}],
-    from: { type: 'phone', number: FROM_NUM },
-    ncco,
-  },
-  (err, result) => {
-    console.log(err || result);
-  },
-);
   res.redirect('/');
 	
 });
