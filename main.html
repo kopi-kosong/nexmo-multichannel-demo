@@ -1,0 +1,133 @@
+<html>
+<head>
+  
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+
+<style>
+
+
+/* Bordered form */
+
+.orangestar {
+  color: orange;
+}
+.whitestar {
+  color: white;
+}
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: left;
+  padding: 5px 10px;
+  margin: 0px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 80%;
+  border-radius: 80%;
+  border-style:solid;
+   border-color: #ff6734;
+}
+
+
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 0px;
+}
+.column2 {
+  float: left;
+  width: 60%;
+  padding: 1px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+
+
+<body>
+  
+	 <div class="App">
+        <div class="App-header">
+            <img src="images/logo.svg" class="App-header-logo" alt="logo" />
+            <h1>Nexmo API Demo by OBS</h1>
+        </div>
+      <div class="App-main">  	
+	    
+	     <!--div class="Login-user" style="background-image: url('images/galaxy_small.jpg'); "-->
+		 
+		  <div class="Login-user" >
+		 
+ <h1> We've found you a driver! </h1>
+		 
+ <div class="row">
+ 		
+  <div class="column">
+    <div class="imgcontainer">
+    <img src="images/Profile_-_Star-Lord_resize.jpg" alt="Avatar" class="avatar">
+	 
+   </div>
+  <div class="container">
+<span class="fa fa-star orangestar"></span>
+<span class="fa fa-star orangestar"></span>
+<span class="fa fa-star orangestar"></span>
+<span class="fa fa-star orangestar"></span>
+<span class="fa fa-star whitestar"></span>	 
+<h4> very good </h4>
+</div>	
+	
+  </div>
+  <div class="column2">
+       <h3> Mr.Star Lord </h3>
+       <h2> SGP ***123A</h2>
+	   <h4> Lamborghini Veneno Roadster (Luxury car, Orange)</h4>
+  </div>
+
+</div>
+
+        <div>
+		  <p class="buttonheader"> Need Help ?</p>
+        <form action="/sms" method="post">
+			<input name="userANumber" type="hidden" value="6590110222">
+			<input name="userBNumber" type="hidden" value="6590116728">
+			<!--i class='fas fa-sms' style='font-size:48px;color:red'></i-->
+            <!--button type="submit" class="btn" id="submit">Send a SMS to Star Lord</button-->
+            <!--button class="btn">  <i class='fas fa-sms' style='font-size:24px;color:red'></i></button-->
+		   <button id class="imgbuttonsms" title="Get Booking Details by SMS" type="submit"> <i class='fas fa-sms' style='font-size:26px;color:red'></i></button>
+       
+		</form>
+		<form action="/call" method="post">
+			<input name="userANumber" type="hidden" value="6590110222">
+			<input name="userBNumber" type="hidden" value="6590116728">
+			<!--i class='fas fa-sms' style='font-size:48px;color:red'></i-->
+            <!--button type="submit" class="btn" id="submit">Send a SMS to Star Lord</button-->
+
+            <!--button class="btn">  <i class='fas fa-sms' style='font-size:24px;color:red'></i></button-->
+              <button  class="imgbuttonphone" title="Get Booking Details by Call"  type="submit"> <i class='fas fa-phone' style='font-size:20px;color:lightblue'></i></button>
+
+		</form>
+		<form action="/chat" method="post">
+			<input name="userANumber" type="hidden" value="6590110222">
+			<input name="userBNumber" type="hidden" value="6590116728">
+		   <button  class="imgbuttonwhatsapp" title="Chat with Driver"  type="submit"> <i class='fas fa-comments' style='font-size:22px;color:#4CAF50'></i></button>
+		</form>
+        </div> 
+	</div> 
+	 <img src="images/obs_logo_small.jpg" class="App-logo" alt="logo" />
+   </div>
+		
+</body>
+
+</html>
