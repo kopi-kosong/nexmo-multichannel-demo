@@ -8,9 +8,7 @@ class SmsProxy {
         this.nexmo = new Nexmo({
             apiKey: process.env.NEXMO_API_KEY,
             apiSecret: process.env.NEXMO_API_SECRET
-  
-           //apiKey: '267a8d9f',
-          // apiSecret: 'D9Qxqddp2fdBprAt'
+
         }, {
                 debug: true
             });
